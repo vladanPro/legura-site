@@ -1,0 +1,33 @@
+name: Site CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Install pinned Axonyx CLI
+        run: cargo install cargo-axonyx --version 0.8.8 --locked
+      - name: Check site
+        run: cargo ax check
+      - name: Check project health
+        run: cargo ax doctor --deny-warnings
+      - name: Build static site
+        run: cargo ax build --clean
+      - name: Verify public pages and assets
+        run: |
+          test -s dist/index.html
+          test -s dist/how-it-works/index.html
+          test -s dist/roadmap/index.html
+          test -s dist/download/index.html
+          test -s dist/css/legura-site.css
+          test -s dist/brand-mark.svg
+          grep -q 'Legura' dist/index.html
+          grep -q 'Download status' dist/download/index.html

@@ -1,0 +1,17 @@
+page HowItWorks() {
+  return ASX {
+    <Head><Title>How it works | Legura</Title></Head>
+    <section class="interior-hero section-wrap">
+      <span class="section-kicker">THE PRODUCT</span>
+      <h1>Publishing, in<br /><em>plain view.</em></h1>
+      <p>Legura is one application with two deliberate surfaces: a public place for readers and a protected place for editors.</p>
+    </section>
+    <section class="section-wrap process-list">
+      <article><span>01 / SET UP</span><div><h2>Start with your own space.</h2><p>The local pilot guides the first administrator through setup. Your database, files, and secrets remain part of your installation, not this presentation site.</p></div></article>
+      <article><span>02 / CREATE</span><div><h2>Write before you publish.</h2><p>Posts move from draft to published. The backoffice includes a rich-text editor, images, preview, and explicit actions for changing content.</p></div></article>
+      <article><span>03 / PRESENT</span><div><h2>Give the words a setting.</h2><p>Choose between the built-in Default and Editorial public themes. The appearance of the public site is independent from the admin workspace.</p></div></article>
+      <article><span>04 / OWN</span><div><h2>Keep the whole thing yours.</h2><p>Legura runs on Axonyx. Backup and recovery are being validated before a packaged release; the current installation remains a development pilot.</p></div></article>
+    </section>
+    <section class="section-wrap inline-cta"><span>SEE THE CURRENT STATE</span><a href="/roadmap">Explore the roadmap <span aria-hidden="true">+</span></a></section>
+  }
+}

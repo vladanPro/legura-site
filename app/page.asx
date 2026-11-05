@@ -1,0 +1,88 @@
+import { Badge } from "@axonyx/ui/foundry/Badge"
+import { LinkButton } from "@axonyx/ui/foundry/LinkButton"
+
+page Home() {
+  return ASX {
+    <section class="hero">
+      <div class="hero__content">
+        <div class="eyebrow"><span class="eyebrow__line"></span> Publishing, without the noise</div>
+        <h1>A better place<br />for your{" "}<em>words.</em></h1>
+        <p class="hero__lead">
+          Legura is a self-hosted publishing CMS taking shape on Axonyx.
+          Write, publish, and own your content with a clear separation between
+          the site people read and the workspace you use to create it.
+        </p>
+        <div class="hero__actions">
+          <LinkButton href="/how-it-works" variant="primary">Explore Legura</LinkButton>
+          <a class="text-action" href="/download">Installation status <span aria-hidden="true">+</span></a>
+        </div>
+        <p class="hero__note">Open development pilot. Not a production CMS release yet.</p>
+      </div>
+      <div class="hero__visual" aria-label="Illustration of a publishing workspace and public story">
+        <div class="visual__rail"><span>01 / DRAFT</span><span>02 / REVIEW</span><strong>03 / PUBLISH</strong></div>
+        <div class="visual__paper">
+          <div class="visual__paper-top"><span>FIELD NOTES</span><span>ISSUE 001</span></div>
+          <div class="visual__paper-body">
+            <span class="visual__category">A STORY IN PROGRESS</span>
+            <strong>Good ideas deserve<br />a home of their own.</strong>
+            <div class="visual__rule"></div>
+            <span class="visual__line visual__line--long"></span>
+            <span class="visual__line"></span>
+            <span class="visual__line visual__line--medium"></span>
+          </div>
+          <div class="visual__paper-bottom"><span>YOUR CONTENT</span><span>YOUR SPACE</span></div>
+        </div>
+        <div class="visual__stamp">BUILT TO<br />PUBLISH</div>
+      </div>
+    </section>
+
+    <section class="section-wrap story-section" id="product">
+      <div class="section-intro">
+        <span class="section-kicker">THE IDEA</span>
+        <h2>One product.<br /><em>Two clear sides.</em></h2>
+        <p>Your readers see the stories. Your team gets the tools to shape them. The two belong together, but never need to look the same.</p>
+      </div>
+      <div class="story-grid">
+        <article class="story-card">
+          <span class="story-card__index">01 / PUBLIC SITE</span>
+          <div class="story-card__glyph" aria-hidden="true">+</div>
+          <h3>Made for reading.</h3>
+          <p>Published stories live on a clean public site. Drafts and administration stay out of sight.</p>
+          <span class="story-card__foot">Content first</span>
+        </article>
+        <article class="story-card story-card--dark">
+          <span class="story-card__index">02 / BACKOFFICE</span>
+          <div class="story-card__glyph" aria-hidden="true">*</div>
+          <h3>Made for making.</h3>
+          <p>Write and edit posts, manage images, and choose the public appearance from a separate workspace.</p>
+          <span class="story-card__foot">Tools with purpose</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="capabilities">
+      <div class="section-wrap">
+        <div class="capabilities__heading">
+          <div><span class="section-kicker">IN THE PILOT TODAY</span><h2>The foundation is real.</h2></div>
+          <Badge tone="warning">Development pilot</Badge>
+        </div>
+        <div class="capabilities__grid">
+          <div><span>01</span><h3>Write and publish</h3><p>Create drafts, edit stories, and publish only when ready.</p></div>
+          <div><span>02</span><h3>Work with images</h3><p>Manage media in the backoffice and connect images to posts.</p></div>
+          <div><span>03</span><h3>Choose a direction</h3><p>Switch between two built-in public themes without changing the admin workspace.</p></div>
+          <div><span>04</span><h3>Own the stack</h3><p>Keep the application, database, and files under your control.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing section-wrap">
+      <span class="section-kicker">BUILDING IN THE OPEN</span>
+      <h2>Not finished.<br /><em>Already taking shape.</em></h2>
+      <p>We are proving the full path from a fresh install to a published story before calling Legura ready for everyday use.</p>
+      <div class="closing__actions">
+        <LinkButton href="/roadmap" variant="primary">See what comes next</LinkButton>
+        <a class="text-action" href="https://github.com/vladanPro/legura">Follow development <span aria-hidden="true">+</span></a>
+      </div>
+    </section>
+  }
+}

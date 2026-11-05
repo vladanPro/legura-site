@@ -1,0 +1,11 @@
+page Error() {
+  return ASX {
+    <Head><Title>Application error | Legura</Title></Head>
+    <section class="interior-hero section-wrap state-page">
+      <span class="section-kicker">500 / SOMETHING WENT WRONG</span>
+      <h1>We could not<br /><em>open this page.</em></h1>
+      <p>Please try again. If the issue continues, you can find the project on GitHub.</p>
+      <a class="text-action" href="/">Back to Legura <span aria-hidden="true">+</span></a>
+    </section>
+  }
+}

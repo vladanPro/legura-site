@@ -1,0 +1,27 @@
+page Download() {
+  return ASX {
+    <Head><Title>Download status | Legura</Title></Head>
+    <section class="interior-hero section-wrap">
+      <span class="section-kicker">GET LEGURA</span>
+      <h1>Not a download<br /><em>button yet.</em></h1>
+      <p>Legura does not have a supported production installer or prebuilt release. You can explore the source pilot locally while we finish the first-user installation path.</p>
+    </section>
+    <section class="section-wrap download-grid">
+      <article class="download-card download-card--primary">
+        <span class="download-card__label">AVAILABLE NOW</span>
+        <h2>Explore the source pilot.</h2>
+        <p>The documented local setup uses the development branch, a published Axonyx CLI, and your own SQLite database. It is for evaluation, not a live production CMS.</p>
+        <a href="https://github.com/vladanPro/legura/blob/dev/docs/installation.md">Read installation instructions <span aria-hidden="true">+</span></a>
+      </article>
+      <article class="download-card">
+        <span class="download-card__label">IN PROGRESS</span>
+        <h2>A real release path.</h2>
+        <p>Before offering a binary download, we want a clean installation, a safe upgrade, backup of content and media, and a verified recovery path.</p>
+        <a href="/roadmap">See the roadmap <span aria-hidden="true">+</span></a>
+      </article>
+    </section>
+    <section class="section-wrap download-footnote">
+      <p>Looking for the framework underneath? <a href="https://axonyx.dev/">Visit Axonyx</a>. Looking for the source? <a href="https://github.com/vladanPro/legura">Open Legura on GitHub</a>.</p>
+    </section>
+  }
+}

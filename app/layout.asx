@@ -1,0 +1,52 @@
+use "@axonyx/ui"
+
+page RootLayout() {
+  return ASX {
+    <Head>
+      <Title>Legura | A calmer way to publish</Title>
+      <Meta
+        name="description"
+        content="Legura is an Axonyx-powered publishing CMS in development. Explore the product, the source pilot, and the path to a self-hosted release."
+      />
+      <Meta name="viewport" content="width=device-width, initial-scale=1" />
+      <Link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <Link rel="stylesheet" href="/css/legura-site.css?v=2" />
+    </Head>
+
+    <div class="legura-site" data-foundry="bronze" data-foundry-style="classic" data-foundry-mode="light">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="site-brand" href="/" aria-label="Legura home">
+            <img src="/brand-mark.svg" alt="" width={36} height={36} />
+            <span>legura<span class="site-brand__period">.</span></span>
+          </a>
+          <nav class="site-nav" aria-label="Primary navigation">
+            <a href="/" aria-current={route.path == "/"}>Product</a>
+            <a href="/how-it-works" aria-current={route.path == "/how-it-works"}>How it works</a>
+            <a href="/roadmap" aria-current={route.path == "/roadmap"}>Roadmap</a>
+            <a href="/download" aria-current={route.path == "/download"}>Download</a>
+          </nav>
+          <a class="site-header__github" href="https://github.com/vladanPro/legura">View on GitHub <span aria-hidden="true">+</span></a>
+        </div>
+      </header>
+
+      <div id="main-content">
+        <Slot />
+      </div>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">
+            <img src="/brand-mark.svg" alt="" width={28} height={28} />
+            <span>Legura</span>
+          </div>
+          <p>A publishing product built with Axonyx. Currently a development pilot.</p>
+          <div class="site-footer__links">
+            <a href="https://github.com/vladanPro/legura">GitHub</a>
+            <a href="https://axonyx.dev/">Axonyx</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  }
+}

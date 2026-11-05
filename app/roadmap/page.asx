@@ -1,0 +1,17 @@
+page Roadmap() {
+  return ASX {
+    <Head><Title>Roadmap | Legura</Title></Head>
+    <section class="interior-hero section-wrap">
+      <span class="section-kicker">THE ROAD AHEAD</span>
+      <h1>Build carefully.<br /><em>Then open the door.</em></h1>
+      <p>Legura is developed in small, testable steps. This is a direction, not a release date or a promise that every item is already available.</p>
+    </section>
+    <section class="section-wrap roadmap-list">
+      <article><span class="roadmap-list__status">01 / PILOT</span><div><h2>Publishing foundation</h2><p>Administrator setup, posts, media, protected backoffice, two built-in public themes, and isolated recovery tests.</p></div><strong>In development</strong></article>
+      <article><span class="roadmap-list__status">02 / FIRST INSTALL</span><div><h2>A path someone else can use</h2><p>Repeatable packaging, documented configuration, upgrade and rollback, and a full install-to-published-story acceptance run.</p></div><strong>Next priority</strong></article>
+      <article><span class="roadmap-list__status">03 / DAILY WORK</span><div><h2>A more complete CMS</h2><p>Pages, navigation, organization, search, editorial revisions, and stronger publishing workflows.</p></div><strong>Planned</strong></article>
+      <article><span class="roadmap-list__status">04 / EXTEND</span><div><h2>Room for an ecosystem</h2><p>Stable contracts for third-party themes and integrations before any plugin marketplace or visual builder.</p></div><strong>Later</strong></article>
+    </section>
+    <section class="section-wrap inline-cta"><span>FOLLOW THE WORK</span><a href="https://github.com/vladanPro/legura">Open the Legura repository <span aria-hidden="true">+</span></a></section>
+  }
+}

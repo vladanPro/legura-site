@@ -1,0 +1,26 @@
+base_url = "http://127.0.0.1:3000"
+check_links = true
+
+[[fast]]
+name = "Legura home"
+goto = "/"
+expect_text = "A better place"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "Product explanation"
+goto = "/how-it-works"
+expect_text = "Publishing, in"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "Roadmap"
+goto = "/roadmap"
+expect_text = "Build carefully"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "Honest download status"
+goto = "/download"
+expect_text = "Not a download"
+expect_not = ["Internal Server Error", "Application error"]

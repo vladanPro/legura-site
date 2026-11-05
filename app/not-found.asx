@@ -1,0 +1,11 @@
+page NotFound() {
+  return ASX {
+    <Head><Title>Page not found | Legura</Title></Head>
+    <section class="interior-hero section-wrap state-page">
+      <span class="section-kicker">404 / NOT FOUND</span>
+      <h1>This page<br /><em>is not here.</em></h1>
+      <p>The link may have changed. The product story is still waiting at the beginning.</p>
+      <a class="text-action" href="/">Back to Legura <span aria-hidden="true">+</span></a>
+    </section>
+  }
+}
