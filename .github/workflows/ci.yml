@@ -30,4 +30,8 @@ jobs:
           test -s dist/css/legura-site.css
           test -s dist/brand-mark.svg
           grep -q 'Legura' dist/index.html
-          grep -q 'Download status' dist/download/index.html
+          grep -Fq 'experimental 0.0.2 pilot' dist/download/index.html
+          for asset in legura-0.0.2-x86_64-pc-windows-msvc.zip legura-0.0.2-x86_64-unknown-linux-gnu.tar.gz; do
+            grep -Fq "/releases/download/v0.0.2-pilot.1/$asset\"" dist/download/index.html
+            grep -Fq "/releases/download/v0.0.2-pilot.1/$asset.sha256\"" dist/download/index.html
+          done
