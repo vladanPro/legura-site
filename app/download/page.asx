@@ -30,8 +30,26 @@ page Download() {
         >Linux SHA-256</a>
       </article>
     </section>
+    <section class="section-wrap download-source" aria-labelledby="source-download-title">
+      <article class="download-card">
+        <span class="download-card__label">SOURCE / BUILD REQUIRED</span>
+        <h2 id="source-download-title">Make Legura your own.</h2>
+        <p>Download the source for the same pilot and edit its .ax, .asx, CSS and Rust files. One source ZIP works for Windows and Linux. To build it, you need Git, Rust and Cargo with a native toolchain, PowerShell 7.4 or later, and Axonyx CLI 0.8.9.</p>
+        <a href="https://github.com/vladanPro/legura/archive/refs/tags/v0.0.2-pilot.1.zip">Download source ZIP <span aria-hidden="true">+</span></a>
+        <a
+          class="download-checksum"
+          href="https://github.com/vladanPro/legura/blob/v0.0.2-pilot.1/docs/installation.md#source-build"
+        >Read the source build guide</a>
+        <details class="download-source__steps">
+          <summary>Build from the extracted ZIP</summary>
+          <p>Open a terminal in the extracted folder. No clone is needed. When setup opens, read the setup token from the private .env file in that folder.</p>
+          <pre><code>{"cargo install cargo-axonyx --version 0.8.9 --locked\npwsh -File scripts/local.ps1 -Task prepare\npwsh -File scripts/local.ps1 -Task start"}</code></pre>
+          <p>Open <code>http://127.0.0.1:3940/setup</code> in your browser.</p>
+        </details>
+      </article>
+    </section>
     <section class="section-wrap download-footnote">
-      <p><a href="https://github.com/vladanPro/legura/releases/tag/v0.0.2-pilot.1">Release notes and verification</a> · <a href="https://github.com/vladanPro/legura/blob/v0.0.2-pilot.1/docs/installation.md">Build from source</a> · <a href="https://axonyx.dev/">Visit Axonyx</a></p>
+      <p><a href="https://github.com/vladanPro/legura/releases/tag/v0.0.2-pilot.1">Release notes and verification</a> · <a href="https://axonyx.dev/">Visit Axonyx</a></p>
     </section>
   }
 }
