@@ -1,27 +1,37 @@
 page Download() {
   return ASX {
-    <Head><Title>Download status | Legura</Title></Head>
+    <Head>
+      <Title>Download the Legura pilot | Legura</Title>
+    </Head>
     <section class="interior-hero section-wrap">
       <span class="section-kicker">GET LEGURA</span>
-      <h1>Not a download<br /><em>button yet.</em></h1>
-      <p>Legura does not have a supported production installer or prebuilt release. You can explore the source pilot locally while we finish the first-user installation path.</p>
+      <h1>Try the<br /><em>Legura pilot.</em></h1>
+      <p>Download the experimental 0.0.2 pilot for a local evaluation. The native packages do not require Rust, Cargo, Node.js or Docker to run. They are unsigned and are not supported production installers.</p>
     </section>
     <section class="section-wrap download-grid">
       <article class="download-card download-card--primary">
-        <span class="download-card__label">AVAILABLE NOW</span>
-        <h2>Explore the source pilot.</h2>
-        <p>The documented local setup uses the development branch, a published Axonyx CLI, and your own SQLite database. It is for evaluation, not a live production CMS.</p>
-        <a href="https://github.com/vladanPro/legura/blob/dev/docs/installation.md">Read installation instructions <span aria-hidden="true">+</span></a>
+        <span class="download-card__label">WINDOWS / X64</span>
+        <h2>Windows ZIP</h2>
+        <p>Extract the ZIP into a new folder. Follow the packaged README to initialize SQLite, start the server and create your first administrator in the browser.</p>
+        <a href="https://github.com/vladanPro/legura/releases/download/v0.0.2-pilot.1/legura-0.0.2-x86_64-pc-windows-msvc.zip">Download Windows ZIP <span aria-hidden="true">+</span></a>
+        <a
+          class="download-checksum"
+          href="https://github.com/vladanPro/legura/releases/download/v0.0.2-pilot.1/legura-0.0.2-x86_64-pc-windows-msvc.zip.sha256"
+        >Windows SHA-256</a>
       </article>
       <article class="download-card">
-        <span class="download-card__label">IN PROGRESS</span>
-        <h2>A real release path.</h2>
-        <p>Before offering a binary download, we want a clean installation, a safe upgrade, backup of content and media, and a verified recovery path.</p>
-        <a href="/roadmap">See the roadmap <span aria-hidden="true">+</span></a>
+        <span class="download-card__label">LINUX / X64</span>
+        <h2>Linux tar.gz</h2>
+        <p>Tested on Ubuntu 24.04. Extract into a new directory and follow the packaged README to initialize SQLite and run the native server.</p>
+        <a href="https://github.com/vladanPro/legura/releases/download/v0.0.2-pilot.1/legura-0.0.2-x86_64-unknown-linux-gnu.tar.gz">Download Linux tar.gz <span aria-hidden="true">+</span></a>
+        <a
+          class="download-checksum"
+          href="https://github.com/vladanPro/legura/releases/download/v0.0.2-pilot.1/legura-0.0.2-x86_64-unknown-linux-gnu.tar.gz.sha256"
+        >Linux SHA-256</a>
       </article>
     </section>
     <section class="section-wrap download-footnote">
-      <p>Looking for the framework underneath? <a href="https://axonyx.dev/">Visit Axonyx</a>. Looking for the source? <a href="https://github.com/vladanPro/legura">Open Legura on GitHub</a>.</p>
+      <p><a href="https://github.com/vladanPro/legura/releases/tag/v0.0.2-pilot.1">Release notes and verification</a> · <a href="https://github.com/vladanPro/legura/blob/v0.0.2-pilot.1/docs/installation.md">Build from source</a> · <a href="https://axonyx.dev/">Visit Axonyx</a></p>
     </section>
   }
 }
