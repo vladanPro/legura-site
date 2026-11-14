@@ -572,6 +572,13 @@ main[data-ax-page] {
 .download-card--primary p { color: #c1bcb1; }
 .download-card a { margin-top: auto; padding-top: 30px; font-size: 13px; font-weight: 700; text-decoration: underline; text-underline-offset: 5px; }
 .download-card .download-checksum { margin-top: 0; padding-top: 12px; font-weight: 400; }
+.download-source { padding-bottom: 48px; }
+.download-source .download-card { min-height: 0; }
+.download-source .download-card__label { margin-bottom: 24px; }
+.download-source__steps { width: 100%; min-width: 0; margin-top: 24px; }
+.download-source__steps summary { cursor: pointer; font-weight: 700; }
+.download-source__steps p { margin-top: 12px; }
+.download-source__steps pre { max-width: 100%; overflow-x: auto; padding: 1rem; border: 1px solid #d3cbbf; background: #f4efe5; }
 .download-footnote { padding-bottom: 110px; color: #66635c; font-size: 14px; }
 .download-footnote a { color: #8c4e30; text-decoration: underline; text-underline-offset: 4px; }
 .state-page { min-height: 66vh; }

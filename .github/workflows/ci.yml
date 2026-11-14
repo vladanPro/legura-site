@@ -35,3 +35,5 @@ jobs:
             grep -Fq "/releases/download/v0.0.2-pilot.1/$asset\"" dist/download/index.html
             grep -Fq "/releases/download/v0.0.2-pilot.1/$asset.sha256\"" dist/download/index.html
           done
+          grep -Fq '/archive/refs/tags/v0.0.2-pilot.1.zip"' dist/download/index.html
+          grep -Fq 'Build from the extracted ZIP' dist/download/index.html
