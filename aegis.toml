@@ -20,7 +20,7 @@ expect_text = "Build carefully"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
-name = "Honest download status"
+name = "Published pilot download"
 goto = "/download"
-expect_text = "Not a download"
-expect_not = ["Internal Server Error", "Application error"]
+expect_text = "experimental 0.0.3 pilot"
+expect_not = ["Internal Server Error", "Application error", "experimental 0.0.2 pilot"]

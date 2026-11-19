@@ -9,8 +9,9 @@ user database, setup route, or administration surface.
 - `/` introduces the product and its current pilot scope.
 - `/how-it-works` explains the public site and backoffice boundary.
 - `/roadmap` separates the pilot, first install, daily CMS work, and later extensions.
-- `/download` links to the current source-pilot instructions and explicitly says
-  that a production installer and prebuilt release do not exist yet.
+- `/download` links to the published 0.0.3 pilot's native Windows/Linux packages,
+  checksums, source ZIP and first-run instructions. These are unsigned evaluation
+  packages, not supported production installers.
 
 The mark in `public/brand-mark.svg` and `public/favicon.svg` is copied from the
 canonical Legura mark. Product behavior and installation instructions belong in
