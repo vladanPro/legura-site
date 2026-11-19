@@ -1,4 +1,9 @@
 page Download() {
+  const version = "0.0.3"
+  const tag = "v" + version + "-pilot.1"
+  const release = "https://github.com/vladanPro/legura/releases"
+  const windows = "legura-" + version + "-x86_64-pc-windows-msvc.zip"
+  const linux = "legura-" + version + "-x86_64-unknown-linux-gnu.tar.gz"
   return ASX {
     <Head>
       <Title>Download the Legura pilot | Legura</Title>
@@ -6,22 +11,22 @@ page Download() {
     <section class="interior-hero section-wrap">
       <span class="section-kicker">GET LEGURA</span>
       <h1>Try the<br /><em>Legura pilot.</em></h1>
-      <p>Download the experimental 0.0.2 pilot for a local evaluation. The native packages do not require Rust, Cargo, Node.js or Docker to run. They are unsigned and are not supported production installers.</p>
+      <p>{"Download the experimental " + version + " pilot for a local evaluation. The native packages do not require Rust, Cargo, Node.js or Docker to run. They are unsigned and are not supported production installers."}</p>
     </section>
     <section class="section-wrap download-grid">
       <article class="download-card download-card--primary">
         <span class="download-card__label">WINDOWS / X64</span>
         <h2>Windows ZIP</h2>
         <p>Extract the ZIP into a new folder. Follow the packaged README to initialize SQLite, start the server and create your first administrator in the browser.</p>
-        <a href="https://github.com/vladanPro/legura/releases/download/v0.0.2-pilot.1/legura-0.0.2-x86_64-pc-windows-msvc.zip">Download Windows ZIP <span aria-hidden="true">+</span></a>
+        <a href={release + "/download/" + tag + "/" + windows}>Download Windows ZIP <span aria-hidden="true">+</span></a>
         <a
           class="download-checksum"
-          href="https://github.com/vladanPro/legura/releases/download/v0.0.2-pilot.1/legura-0.0.2-x86_64-pc-windows-msvc.zip.sha256"
+          href={release + "/download/" + tag + "/" + windows + ".sha256"}
         >Windows SHA-256</a>
         <details class="download-source__steps">
           <summary>Run on Windows (PowerShell)</summary>
           <p>Compare the ZIP's hash with the SHA-256 file before extracting:</p>
-          <pre><code>Get-FileHash -Algorithm SHA256 .\legura-0.0.2-x86_64-pc-windows-msvc.zip</code></pre>
+          <pre><code>{"Get-FileHash -Algorithm SHA256 .\\" + windows}</code></pre>
           <p>Open PowerShell inside the new, private extracted folder. Run these commands in order, stopping if any fails:</p>
           <pre><code>{".\\legura-maintenance.exe verify-package .\nNew-Item -ItemType Directory data\n.\\legura-maintenance.exe init data/legura.db\n.\\legura-maintenance.exe config-local .\n$env:AXONYX_HOST = '127.0.0.1'\n$env:AXONYX_PORT = '3940'\n.\\legura-server.exe"}</code></pre>
         </details>
@@ -30,15 +35,15 @@ page Download() {
         <span class="download-card__label">LINUX / X64</span>
         <h2>Linux tar.gz</h2>
         <p>Tested on Ubuntu 24.04. Extract into a new directory and follow the packaged README to initialize SQLite and run the native server.</p>
-        <a href="https://github.com/vladanPro/legura/releases/download/v0.0.2-pilot.1/legura-0.0.2-x86_64-unknown-linux-gnu.tar.gz">Download Linux tar.gz <span aria-hidden="true">+</span></a>
+        <a href={release + "/download/" + tag + "/" + linux}>Download Linux tar.gz <span aria-hidden="true">+</span></a>
         <a
           class="download-checksum"
-          href="https://github.com/vladanPro/legura/releases/download/v0.0.2-pilot.1/legura-0.0.2-x86_64-unknown-linux-gnu.tar.gz.sha256"
+          href={release + "/download/" + tag + "/" + linux + ".sha256"}
         >Linux SHA-256</a>
         <details class="download-source__steps">
           <summary>Run on Linux (shell)</summary>
           <p>Verify the archive from the folder containing it and its checksum:</p>
-          <pre><code>sha256sum -c legura-0.0.2-x86_64-unknown-linux-gnu.tar.gz.sha256</code></pre>
+          <pre><code>{"sha256sum -c " + linux + ".sha256"}</code></pre>
           <p>Extract into a new, private directory. Run these commands from that directory, stopping if any fails:</p>
           <pre><code>{"./legura-maintenance verify-package .\nmkdir -m 700 data\n./legura-maintenance init data/legura.db\n./legura-maintenance config-local .\nAXONYX_HOST=127.0.0.1 AXONYX_PORT=3940 ./legura-server"}</code></pre>
         </details>
@@ -57,10 +62,10 @@ page Download() {
         <span class="download-card__label">SOURCE / BUILD REQUIRED</span>
         <h2 id="source-download-title">Make Legura your own.</h2>
         <p>Download the source for the same pilot and edit its .ax, .asx, CSS and Rust files. One source ZIP works for Windows and Linux. To build it, you need Git, Rust and Cargo with a native toolchain, PowerShell 7.4 or later, and Axonyx CLI 0.8.9.</p>
-        <a href="https://github.com/vladanPro/legura/archive/refs/tags/v0.0.2-pilot.1.zip">Download source ZIP <span aria-hidden="true">+</span></a>
+        <a href={"https://github.com/vladanPro/legura/archive/refs/tags/" + tag + ".zip"}>Download source ZIP <span aria-hidden="true">+</span></a>
         <a
           class="download-checksum"
-          href="https://github.com/vladanPro/legura/blob/v0.0.2-pilot.1/docs/installation.md#source-build"
+          href={"https://github.com/vladanPro/legura/blob/" + tag + "/docs/installation.md#source-build"}
         >Read the source build guide</a>
         <details class="download-source__steps">
           <summary>Build from the extracted ZIP</summary>
@@ -71,7 +76,7 @@ page Download() {
       </article>
     </section>
     <section class="section-wrap download-footnote">
-      <p><a href="https://github.com/vladanPro/legura/releases/tag/v0.0.2-pilot.1">Release notes and verification</a> · <a href="https://axonyx.dev/">Visit Axonyx</a></p>
+      <p><a href={release + "/tag/" + tag}>Release notes and verification</a> · <a href="https://axonyx.dev/">Visit Axonyx</a></p>
     </section>
   }
 }
