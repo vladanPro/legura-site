@@ -30,17 +30,21 @@ jobs:
           test -s dist/css/legura-site.css
           test -s dist/brand-mark.svg
           grep -q 'Legura' dist/index.html
-          grep -Fq 'experimental 0.0.3 pilot' dist/download/index.html
-          if grep -Fq '0.0.2' dist/download/index.html; then
+          grep -Fq 'experimental 0.0.4 pilot' dist/download/index.html
+          if grep -Eq 'v0\.0\.[23]-pilot\.1|legura-0\.0\.[23]-' dist/download/index.html; then
             echo 'Download page still contains a previous pilot version'
             exit 1
           fi
-          for asset in legura-0.0.3-x86_64-pc-windows-msvc.zip legura-0.0.3-x86_64-unknown-linux-gnu.tar.gz; do
-            grep -Fq "/releases/download/v0.0.3-pilot.1/$asset\"" dist/download/index.html
-            grep -Fq "/releases/download/v0.0.3-pilot.1/$asset.sha256\"" dist/download/index.html
+          for asset in legura-0.0.4-x86_64-pc-windows-msvc.zip legura-0.0.4-x86_64-unknown-linux-gnu.tar.gz; do
+            grep -Fq "/releases/download/v0.0.4-pilot.1/$asset\"" dist/download/index.html
+            grep -Fq "/releases/download/v0.0.4-pilot.1/$asset.sha256\"" dist/download/index.html
           done
-          grep -Fq '/archive/refs/tags/v0.0.3-pilot.1.zip"' dist/download/index.html
-          grep -Fq '/releases/tag/v0.0.3-pilot.1"' dist/download/index.html
+          grep -Fq '/archive/refs/tags/v0.0.4-pilot.1.zip"' dist/download/index.html
+          grep -Fq '/releases/tag/v0.0.4-pilot.1"' dist/download/index.html
+          grep -Fq '0.8.10' dist/download/index.html
+          grep -Fq 'id="upgrade-title"' dist/download/index.html
+          grep -Fq 'Do not repeat the fresh-install commands' dist/download/index.html
+          grep -Fq '/blob/v0.0.4-pilot.1/docs/native-package-v0.md#schema-changes-isolated-rehearsal"' dist/download/index.html
           grep -Fq 'Build from the extracted ZIP' dist/download/index.html
           grep -Fq 'Run on Windows (PowerShell)' dist/download/index.html
           grep -Fq 'Run on Linux (shell)' dist/download/index.html
