@@ -9,9 +9,10 @@ user database, setup route, or administration surface.
 - `/` introduces the product and its current pilot scope.
 - `/how-it-works` explains the public site and backoffice boundary.
 - `/roadmap` separates the pilot, first install, daily CMS work, and later extensions.
-- `/download` links to the published 0.0.3 pilot's native Windows/Linux packages,
+- `/download` links to the published 0.0.4 pilot's native Windows/Linux packages,
   checksums, source ZIP and first-run instructions. These are unsigned evaluation
-  packages, not supported production installers.
+  packages, not supported production installers. Existing installations use the
+  separate backup/upgrade rehearsal guide, not the fresh-install commands.
 
 The mark in `public/brand-mark.svg` and `public/favicon.svg` is copied from the
 canonical Legura mark. Product behavior and installation instructions belong in
@@ -35,7 +36,8 @@ or custom JavaScript.
 
 ## Deployment boundary
 
-The proposed public URL is `legura.axonyx.dev`. Do not point the subdomain at a
+The public URL is `legura.axonyx.dev`. Do not point the subdomain at a
 CMS installation. Deploy only this presentation app's verified static output,
 or serve it with the Axonyx server if the host requires that model. Do not add a
-binary download until an independently tested installation and upgrade path exists.
+binary download unless that exact release has passed its installation and upgrade
+gates. Published 0.0.4 evidence is linked from its GitHub prerelease.
