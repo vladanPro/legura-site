@@ -22,5 +22,5 @@ expect_not = ["Internal Server Error", "Application error"]
 [[fast]]
 name = "Published pilot download"
 goto = "/download"
-expect_text = "experimental 0.0.4 pilot"
+expect_text = "experimental 0.0.5 pilot"
 expect_not = ["Internal Server Error", "Application error", "experimental 0.0.3 pilot"]
