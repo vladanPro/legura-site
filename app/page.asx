@@ -96,7 +96,7 @@ page Home() {
           <div>
             <span>03</span>
             <h3>Choose a direction</h3>
-            <p>Switch between two built-in public themes without changing the admin workspace.</p>
+            <p>Preview and activate Classic, Alloy or Legura without changing the admin workspace.</p>
           </div>
           <div>
             <span>04</span>

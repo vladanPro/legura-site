@@ -1,5 +1,5 @@
 page Download() {
-  const version = "0.0.4"
+  const version = "0.0.5"
   const tag = "v" + version + "-pilot.1"
   const release = "https://github.com/vladanPro/legura/releases"
   const windows = "legura-" + version + "-x86_64-pc-windows-msvc.zip"
@@ -79,9 +79,9 @@ page Download() {
       <article class="download-card">
         <span class="download-card__label">EXISTING INSTALLATIONS</span>
         <h2 id="upgrade-title">Back up before moving forward.</h2>
-        <p>Version 0.0.4 adds categories and migration 020. Downloading new executables does not upgrade your database. Do not repeat the fresh-install commands above on an existing site.</p>
+        <p>Version 0.0.5 adds the Legura theme and previews for all three built-in themes. Migration 021 preserves your active theme, color mode and palette. Downloading new executables does not upgrade your database. Do not repeat the fresh-install commands above on an existing site.</p>
         <p>Back up and verify the database together with referenced media. Rehearse the upgrade on an inactive copy, preserve the original installation and rotate session secrets when activating recovery. Never overwrite a running package or its database, media or private configuration.</p>
-        <p>The backup reader accepts versions 0.0.1 through 0.0.4; older readers cannot read 0.0.4 backups. There is no automatic update or rollback. The isolated 0.0.3 to 0.0.4 upgrade path has passed release checks, but your installation still needs its own rehearsal.</p>
+        <p>The backup reader accepts versions 0.0.1 through 0.0.5; older readers cannot read 0.0.5 backups. There is no automatic update or rollback. The upgrade from the published 0.0.4 Windows package was rehearsed on an isolated copy. Your installation still needs its own rehearsal.</p>
         <a href={"https://github.com/vladanPro/legura/blob/" + tag + "/docs/native-package-v0.md#schema-changes-isolated-rehearsal"}>Read the upgrade rehearsal guide <span aria-hidden="true">+</span></a>
       </article>
     </section>
