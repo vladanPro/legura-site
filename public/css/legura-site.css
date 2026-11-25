@@ -578,7 +578,16 @@ main[data-ax-page] {
 .download-source__steps { width: 100%; min-width: 0; margin-top: 24px; }
 .download-source__steps summary { cursor: pointer; font-weight: 700; }
 .download-source__steps p { margin-top: 12px; }
-.download-source__steps pre { max-width: 100%; overflow-x: auto; padding: 1rem; border: 1px solid #d3cbbf; background: #f4efe5; }
+.download-source__steps pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid #d3cbbf;
+  background: #f4efe5;
+  color: var(--ink);
+}
+
+.download-source__steps pre code { color: inherit; }
 .download-footnote { padding-bottom: 110px; color: #66635c; font-size: 14px; }
 .download-footnote a { color: #8c4e30; text-decoration: underline; text-underline-offset: 4px; }
 .state-page { min-height: 66vh; }

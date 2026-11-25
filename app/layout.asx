@@ -10,7 +10,7 @@ page RootLayout() {
       />
       <Meta name="viewport" content="width=device-width, initial-scale=1" />
       <Link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-      <Link rel="stylesheet" href="/css/legura-site.css?v=2" />
+      <Link rel="stylesheet" href="/css/legura-site.css?v=3" />
     </Head>
 
     <div class="legura-site" data-foundry="bronze" data-foundry-style="classic" data-foundry-mode="light">
