@@ -30,10 +30,10 @@ jobs:
           test -s dist/css/legura-site.css
           test -s dist/brand-mark.svg
           grep -q 'Legura' dist/index.html
-          pilot=0.0.5
+          pilot=0.0.6
           tag="v${pilot}-pilot.1"
           grep -Fq "experimental $pilot pilot" dist/download/index.html
-          if grep -Eq 'v0\.0\.[234]-pilot\.1|legura-0\.0\.[234]-' dist/download/index.html; then
+          if grep -Eq 'v0\.0\.[2345]-pilot\.1|legura-0\.0\.[2345]-' dist/download/index.html; then
             echo 'Download page still contains a previous pilot version'
             exit 1
           fi
@@ -43,11 +43,12 @@ jobs:
           done
           grep -Fq "/archive/refs/tags/$tag.zip\"" dist/download/index.html
           grep -Fq "/releases/tag/$tag\"" dist/download/index.html
-          grep -Fq '0.8.10' dist/download/index.html
+          grep -Fq '0.8.13' dist/download/index.html
           grep -Fq 'id="upgrade-title"' dist/download/index.html
           grep -Fq 'Do not repeat the fresh-install commands' dist/download/index.html
           grep -Fq "/blob/$tag/docs/native-package-v0.md#schema-changes-isolated-rehearsal\"" dist/download/index.html
-          grep -Fq 'Migration 021 preserves' dist/download/index.html
+          grep -Fq 'adds no new database migrations' dist/download/index.html
+          grep -Fq 'automatic SEO metadata' dist/roadmap/index.html
           grep -Fq "Available in $pilot pilot" dist/roadmap/index.html
           grep -Fq 'Preview and activate Classic, Alloy or Legura' dist/index.html
           grep -Fq 'Build from the extracted ZIP' dist/download/index.html
